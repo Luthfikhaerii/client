@@ -1,23 +1,23 @@
 import BlogCard from "@/components/BlogCard";
 import CarouselBlog from "@/components/CarouselBlog";
 
-async function getDataBlogStory() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/blogs?populate=image&filters[category][$eq]=story&pagination[start]=0&pagination[limit]=3&sort=id:desc`,{ cache: "no-store" }
-  );
-  return res.json();
-}
+// async function getDataBlogStory() {
+//   const res = await fetch(
+//     `${process.env.NEXT_PUBLIC_URL}/api/blogs?populate=image&filters[category][$eq]=story&pagination[start]=0&pagination[limit]=3&sort=id:desc`,{ cache: "no-store" }
+//   );
+//   return res.json();
+// }
 
-async function getDataBlogTutorial() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/blogs?populate=image&filters[category][$eq]=tutorial&pagination[start]=0&pagination[limit]=3&sort=id:desc`,{ cache: "no-store" }
-  );
-  return res.json();
-}
+// async function getDataBlogTutorial() {
+//   const res = await fetch(
+//     `${process.env.NEXT_PUBLIC_URL}/api/blogs?populate=image&filters[category][$eq]=tutorial&pagination[start]=0&pagination[limit]=3&sort=id:desc`,{ cache: "no-store" }
+//   );
+//   return res.json();
+// }
 
 export default async function Blog() {
-  const dataBlogStory = await getDataBlogStory();
-  const dataBlogTutorial = await getDataBlogTutorial();
+  // const dataBlogStory = await getDataBlogStory();
+  // const dataBlogTutorial = await getDataBlogTutorial();
   
 
   return (
@@ -36,6 +36,7 @@ export default async function Blog() {
         <h1 className="md:ml-8 ml-4 text-lg md:text-4xl mt-5 md:mt-8 md:mb-5 font-bold text-blue-800">
           RECENT POST
         </h1>
+        {/* DINAMIS DI COMPONENT CAROUSEL BLOG , 4 BLOG TERBARU CATEGORY (CAMPUR)*/}
         <CarouselBlog />
       </div>
       <br />
@@ -45,48 +46,52 @@ export default async function Blog() {
           className="col-start-1 md:h-96 h-68"
         />
         <div className="overflow-auto w-full">
-          <div className="flex flex-nowrap justify-evenly md:w-full w-[640px] md:h-auto col-start-2">
-            {dataBlogStory.data.map((a, key) => {
-              const title = a.attributes.title;
-              const slug = a.attributes.slug;
-              const image = a.attributes.image.data[0].attributes.url;
-              return (
-                <BlogCard
-                  image={process.env.NEXT_PUBLIC_URL + image}
-                  title={title}
-                  slug={slug}
-                  key={key}
+          <div className="flex flex-nowrap justify-evenly md:w-full w-[640px] md:h-auto col-start-2 content-center">
+            {/* DINAMIS 4 BLOG TERBARU KATEGORI STORY  */}
+          <BlogCard
+                  image={'/images/news/recent/cblog.png'}
+                  title={"Informatika pada sehari hari"}
+                  slug={'/informatika'}
+                  
                 />
-              );
-            })}
+                <BlogCard
+                  image={'/images/news/recent/cblog.png'}
+                  title={"Informatika pada sehari hari"}
+                  slug={'/informatika'}
+                  
+                />
+                <BlogCard
+                  image={'/images/news/recent/cblog.png'}
+                  title={"Informatika pada sehari hari"}
+                  slug={'/informatika'}
+                  
+                />
           </div>
         </div>
       </div>
-      <div className="w-full items-center mt-4 md:mt-0 flex justify-center md:grid md:grid-cols-4 md:gap-2 md:mb-16">
-        <div className="cursor-pointer md:col-start-2 text-center mx-auto ">
-            <h1 className="font-bold md:text-3xl text-xl text-blue-600 hover:text-blue-800">PREVIOUS</h1>
-        </div>
-        <div className="cursor-pointer md:col-start-4 text-center mx-auto">
-            <h1 className="font-bold md:text-3xl text-xl text-blue-600 hover:text-blue-800">NEXT</h1>
-        </div>
-      </div>
-      <br />
+      
       <div className="bg-cover w-full grid grid-cols-2 md:flex">
         <div className="overflow-auto w-full">
-          <div className="flex flex-nowrap flex-row-reverse justify-evenly md:w-full md:h-auto w-[640px] col-start-1">
-            {dataBlogTutorial.data.map((a, key) => {
-              const title = a.attributes.title;
-              const slug = a.attributes.slug;
-              const image = a.attributes.image.data[0].attributes.url;
-              return (
-                <BlogCard
-                  image={process.env.NEXT_PUBLIC_URL + image}
-                  title={title}
-                  slug={slug}
-                  key={key}
+          <div className="flex flex-nowrap flex-row-reverse justify-evenly md:w-full md:h-auto w-[640px] col-start-1 content-center">
+          {/* DINAMIS 3 BLOG TERBARU KATEGORI TUTORIAL  */}
+          <BlogCard
+                  image={'/images/news/recent/cblog.png'}
+                  title={"Informatika pada sehari hari"}
+                  slug={'/informatika'}
+                  
                 />
-              );
-            })}
+                <BlogCard
+                  image={'/images/news/recent/cblog.png'}
+                  title={"Informatika pada sehari hari"}
+                  slug={'/informatika'}
+                  
+                />
+                <BlogCard
+                  image={'/images/news/recent/cblog.png'}
+                  title={"Informatika pada sehari hari"}
+                  slug={'/informatika'}
+                  
+                />
           </div>
         </div>
         <img
@@ -95,12 +100,12 @@ export default async function Blog() {
         />
       </div>
       <div className="mt-4 md:mt-0 w-full items-center flex justify-center md:grid md:grid-cols-4 md:gap-2 md:mb-16 mb-5">
-        <div className="cursor-pointer md:col-start-1 text-center mx-auto ">
+        {/* <div className="cursor-pointer md:col-start-1 text-center mx-auto ">
             <h1 className="font-bold md:text-3xl text-xl text-blue-600 hover:text-blue-800">PREVIOUS</h1>
         </div>
         <div className="cursor-pointer md:col-start-3 text-center mx-auto">
             <h1 className="font-bold md:text-3xl text-xl text-blue-600 hover:text-blue-800">NEXT</h1>
-        </div>
+        </div> */}
       </div>
     </div>
   );

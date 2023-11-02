@@ -28,27 +28,27 @@ export default function Solutions(){
               <div className='absolute bg-cover w-full grid grid-cols-3 z-10 h-[300px] md:h-[600px] bg-[url("/images/solution/oursolution/rectangle15.png")]'>
                 <div className="my-auto mx-auto col-start-1 items-center">
                   <div className='text-center'>
-                     <h1 className='font-bold text-base md:text-4xl text-white'>IT</h1>
-                     <h1 className='font-bold md:mb-10 mb-4 text-base md:text-4xl text-white'>SOLUTION</h1>
+                     <h1 className='font-bold text-[10px] md:text-4xl text-white'>IT</h1>
+                     <h1 className='font-bold md:mb-10 mb-4 text-[10px] sm:text-base md:text-4xl text-white'>SOLUTION</h1>
                      {
-                     button1?<h1 onClick={onclick1} className='md:w-80 h-16 md:h-64 md:font-bold font-semibold md:text-2xl text-white text-xs mx-auto mb-20 md:mb-8 w-28 z-20 cursor-pointer show'>LAYANAN TERBAIK UNTUK KEBUTUHAN SOLUSI IT TERINTEGRASI (SOFWARE DEVELOPMENT). MULAI DARI WEBSITE,APLIKASI MULTIPLATFORM, DAN GAME</h1>:<img onClick={onclick1} className="md:w-56 mx-auto w-20 z-20 cursor-pointer show" src='/images/solution/oursolution/bleft.png'/>
+                     button1?<h1 onClick={onclick1} className='md:w-80 h-16 md:h-64 md:font-bold font-semibold md:text-2xl text-white text-[6px] px-1 sm:text-sm mx-auto mb-20 md:mb-8 w-24 z-20 cursor-pointer show'>LAYANAN TERBAIK UNTUK KEBUTUHAN SOLUSI IT TERINTEGRASI (SOFWARE DEVELOPMENT). MULAI DARI WEBSITE,APLIKASI MULTIPLATFORM, DAN GAME</h1>:<img onClick={onclick1} className="md:w-56 mx-auto w-20 z-20 cursor-pointer show" src='/images/solution/oursolution/bleft.png'/>
                      }
                   </div>
                 </div>
                 <div className="my-auto mx-auto col-start-2 items-center">
                   <div className='text-center'>
-                     <h1 className='font-bold text-base md:text-4xl text-white'>BUSINESS DIGITAL</h1>
-                     <h1 className='font-bold md:mb-10 mb-4 text-base md:text-4xl text-white'> SOLUTION</h1>
+                     <h1 className='font-bold text-[10px] md:text-4xl text-white'>BUSINESS DIGITAL</h1>
+                     <h1 className='font-bold md:mb-10 mb-4 text-[10px] sm:text-base md:text-4xl text-white'> SOLUTION</h1>
                      {
-                     button2?<h1 onClick={onclick2} className='md:w-80 h-16 md:h-64 md:font-bold font-semibold md:text-2xl text-white text-xs mx-auto mb-20 md:mb-8 w-28 z-20 cursor-pointer show'>LAYANAN JASA PEMBUATAN ENTERPRISE RESOURCE PLANNING (ERP) DAN MANUFACTURING EXECUTION SYSTEM (MES) UNTUK BERBAGAI INDUSTRI.</h1>:<img onClick={onclick2} className="md:w-56 mx-auto w-20 z-20 cursor-pointer show" src='/images/solution/oursolution/bmid.png'/>
+                     button2?<h1 onClick={onclick2} className='md:w-80 h-16 md:h-64 md:font-bold font-semibold md:text-2xl text-white text-[6px] px-1 sm:text-sm mx-auto mb-20 md:mb-8 w-24 z-20 cursor-pointer show'>LAYANAN JASA PEMBUATAN ENTERPRISE RESOURCE PLANNING (ERP) DAN MANUFACTURING EXECUTION SYSTEM (MES) UNTUK BERBAGAI INDUSTRI.</h1>:<img onClick={onclick2} className="md:w-56 mx-auto w-20 z-20 cursor-pointer show" src='/images/solution/oursolution/bmid.png'/>
                      }
                   </div>   
                 </div>
                 <div className="my-auto mx-auto col-start-3  items-center">
                   <div className='text-center'>
-                     <h1 className='font-bold md:mb-10 mb-4 text-base md:text-4xl text-white'>DIGITAL MARKETING</h1>
+                     <h1 className='font-bold md:mb-10 mb-4 text-[10px] sm:text-base md:text-4xl text-white'>DIGITAL MARKETING</h1>
                      {
-                     button3?<h1 onClick={onclick3} className='md:w-80 h-16 md:h-64 md:font-bold font-semibold md:text-2xl text-white text-xs mx-auto mb-20 md:mb-8 w-28 z-20 cursor-pointer show'>LAYANAN JASA SOSIAL MEDIA MARKETING, WEBSITE LANDING PAGE, DAN LAINNYA UNTUK BISNIS ANDA.</h1>:<img onClick={onclick3} className="md:w-56 mx-auto w-20 z-20 cursor-pointer show" src='/images/solution/oursolution/bright.png'/>
+                     button3?<h1 onClick={onclick3} className='md:w-80 h-16 md:h-64 md:font-bold font-semibold md:text-2xl text-white text-[6px] px-1 sm:text-sm mx-auto mb-20 md:mb-8 w-24 z-20 cursor-pointer show'>LAYANAN JASA SOSIAL MEDIA MARKETING, WEBSITE LANDING PAGE, DAN LAINNYA UNTUK BISNIS ANDA.</h1>:<img onClick={onclick3} className="md:w-56 mx-auto w-20 z-20 cursor-pointer show" src='/images/solution/oursolution/bright.png'/>
                      }
                   </div>         
                 </div>

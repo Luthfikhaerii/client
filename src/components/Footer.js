@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-async function getDataInformation() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/informs`);
-  return res.json();
-}
+// async function getDataInformation() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/informs`);
+//   return res.json();
+// }
 
 export default async function Footer() {
-  const dataInformation = await getDataInformation()
-  const information = await dataInformation.data[0].attributes
+  // const dataInformation = await getDataInformation()
+  // const information = await dataInformation.data[0].attributes
 
   return (
     <footer
@@ -20,10 +20,10 @@ export default async function Footer() {
     >
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="flex w-full max-w-screen-xl mx-auto items-center justify-center text-center">
-          <h6 className="text-white font-semibold md:text-xl text-xs">
+          <h6 className="text-white font-semibold md:text-xl text-[8px]">
             GET CONNECTED WITH US ON SOCIAL NETWORKS:
           </h6>
-          <Link href={information.instagram_link}>
+          <Link href={"/"}>
             <Image
               src="/images/logo/sosmed_logo/ig.png"
               width={20}
@@ -32,7 +32,7 @@ export default async function Footer() {
               className="m-3"
             />
           </Link>
-          <Link href={information.whatssap_link}>
+          <Link href={"/"}>
             <Image
               src="/images/logo/sosmed_logo/wa.png"
               width={25}
@@ -41,7 +41,7 @@ export default async function Footer() {
               className="m-3"
             />
           </Link>
-          <Link href={information.facebook_link}>
+          <Link href={""}>
             <Image
               src="/images/logo/sosmed_logo/fb.png"
               width={20}
@@ -73,7 +73,7 @@ export default async function Footer() {
                   className="h-6 mr-1"
                   alt="saptaloka"
                 />
-                <span className="self-center font-semibold md:text-xl text-xs whitespace-nowrap text-white">
+                <span className="self-center font-semibold md:text-xl text-[8px] whitespace-nowrap text-white">
                   Saptaloka Digital
                 </span>
               </Link>
@@ -85,7 +85,7 @@ export default async function Footer() {
                   />
                   <Link
                     href="/contact"
-                    className="hover:underline md:text-sm md:w-40 w-32 text-xs"
+                    className="hover:underline md:text-sm md:w-40 w-32 text-[8px]"
                   >
                     JALAN MELONG TENGAH RT 1 RW 21 33 JAWABARAT
                   </Link>
@@ -97,7 +97,7 @@ export default async function Footer() {
                   />
                   <Link
                     href="#"
-                    className="hover:underline md:text-sm md:w-1/3 w-24 text-[0.65rem]"
+                    className="hover:underline md:text-sm md:w-1/3 w-24 text-[7px]"
                   >
                     SAPTALOKADIGITAL@GMAIL.COM
                   </Link>
@@ -109,7 +109,7 @@ export default async function Footer() {
                   />
                   <Link
                     href="#"
-                    className="hover:underline md:text-sm md:w-40 w-32 text-xs"
+                    className="hover:underline md:text-sm md:w-40 w-32 text-[8px]"
                   >
                     09345345345/340435345
                   </Link>
@@ -123,7 +123,7 @@ export default async function Footer() {
                   className="md:h-6 md:w-6 w-3 h-3 md:mr-3 mr-2"
                   alt="saptaloka"
                 />
-                <h2 className="mb-6 md:text-xl text-xs font-semibold text-white uppercase ">
+                <h2 className="mb-6 md:text-xl text-[8px] font-semibold text-white uppercase ">
                   SOLUTION
                 </h2>
               </Link>
@@ -135,7 +135,7 @@ export default async function Footer() {
                   />
                   <Link
                     href="/solutions/it"
-                    className="hover:underline  md:text-sm text-xs"
+                    className="hover:underline  md:text-sm text-[8px]"
                   >
                     IT SOLUTION
                   </Link>
@@ -147,7 +147,7 @@ export default async function Footer() {
                   />
                   <Link
                     href="/solutions/business"
-                    className="hover:underline md:text-sm text-xs"
+                    className="hover:underline md:text-sm text-[8px]"
                   >
                     BUSINESS DIGITAL SOLUTION
                   </Link>
@@ -159,7 +159,7 @@ export default async function Footer() {
                   />
                   <Link
                     href="/solutions/business"
-                    className="hover:underline md:text-sm text-xs"
+                    className="hover:underline md:text-sm text-[8px]"
                   >
                     DIGITAL MARKETING
                   </Link>
@@ -173,7 +173,7 @@ export default async function Footer() {
                   className="md:h-6 md:w-6 w-3 h-3 md:mr-3 mr-2"
                   alt="saptaloka"
                 />
-                <h2 className="mb-6 md:text-xl text-xs font-semibold text-white uppercase">
+                <h2 className="mb-6 md:text-xl text-[8px] font-semibold text-white uppercase">
                   BLOG & NEWS
                 </h2>
               </Link>
@@ -185,7 +185,7 @@ export default async function Footer() {
                   />
                   <Link
                     href="/blog"
-                    className="hover:underline md:text-sm text-xs"
+                    className="hover:underline md:text-sm text-[8px]"
                   >
                     TUTORIAL
                   </Link>
@@ -197,7 +197,7 @@ export default async function Footer() {
                   />
                   <Link
                     href="/blog"
-                    className="hover:underline md:text-sm text-xs"
+                    className="hover:underline md:text-sm text-[8px]"
                   >
                     STORIES
                   </Link>
